@@ -1,0 +1,63 @@
+﻿<t:RadWindow  xmlns:t="http://schemas.telerik.com/2008/xaml/presentation" x:Class="WpfAppCalc.Calculator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:navigation="clr-namespace:Telerik.Windows.Controls.Navigation;assembly=Telerik.Windows.Controls.Navigation"
+        xmlns:local="clr-namespace:WpfAppCalc"
+        mc:Ignorable="d"
+        Header="Calculator" Height="350" Width="400" WindowStartupLocation="CenterScreen" navigation:RadWindowInteropHelper.ShowInTaskbar="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="9*"/>
+                <ColumnDefinition Width="1.5*"/>
+
+            </Grid.ColumnDefinitions>
+
+
+           
+            <t:RadButton Grid.Column="1" Click="Button_Delete_Click">Clear</t:RadButton>
+            <TextBlock x:Name="TextResult" Grid.Row="0" FontSize="30" FontFamily="vazir" Background="Transparent"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <t:RadButton Margin="4" Grid.Column="0" FontSize="25" Click="Button_Click">1</t:RadButton>
+            <t:RadButton Margin="4" Grid.Column="1" FontSize="25" Click="Button_Click">2</t:RadButton>
+            <t:RadButton Margin="4" Grid.Column="2" FontSize="25" Click="Button_Click">3</t:RadButton>
+            <t:RadButton Margin="4" Grid.Column="3" FontSize="25" Click="Button_Operation_Click" >+</t:RadButton>
+
+            <t:RadButton Margin="4" Grid.Row="1" Grid.Column="0" FontSize="25" Click="Button_Click" >4</t:RadButton>
+            <t:RadButton Margin="4" Grid.Row="1" Grid.Column="1" FontSize="25" Click="Button_Click" >5</t:RadButton>
+            <t:RadButton Margin="4" Grid.Row="1" Grid.Column="2" FontSize="25" Click="Button_Click" >6</t:RadButton>
+            <t:RadButton Margin="4" Grid.Row="1" Grid.Column="3" FontSize="25" Click="Button_Operation_Click" >-</t:RadButton>
+
+            <t:RadButton Margin="4" Grid.Row="2" Grid.Column="0" FontSize="25" Click="Button_Click" >7</t:RadButton>
+            <t:RadButton Margin="4" Grid.Row="2" Grid.Column="1" FontSize="25" Click="Button_Click" >8</t:RadButton>
+            <t:RadButton Margin="4" Grid.Row="2" Grid.Column="2" FontSize="25" Click="Button_Click" >9</t:RadButton>
+            <t:RadButton Margin="4" Grid.Row="2" Grid.Column="3" FontSize="25" Click="Button_Operation_Click" >*</t:RadButton>
+
+            <t:RadButton Margin="4" Grid.Row="3" Grid.Column="0" FontSize="25" Click="Button_Click" >0</t:RadButton>
+            <t:RadButton Margin="4" Grid.Row="3" Grid.Column="1" FontSize="25" Click="Button_Click" >.</t:RadButton>
+            <t:RadButton Margin="4" Grid.Row="3" Grid.Column="2" FontSize="25" Click="Button_Result_Click">=</t:RadButton>
+            <t:RadButton Margin="4" Grid.Row="3" Grid.Column="3" FontSize="25" Click="Button_Operation_Click">/</t:RadButton>
+        </Grid>
+
+    </Grid>
+
+</t:RadWindow>
